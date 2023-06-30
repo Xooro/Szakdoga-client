@@ -1,0 +1,11 @@
+<div style="border: 1px solid black;">
+    <ul style="list-style: none;" *ngFor="let item of shownList">
+        <li>
+            <button (click)="folderAction(item)" *ngIf="item.Type == '.dir'" style="margin: 5px;"><fa-icon [icon]="faGreaterThan"></fa-icon></button>
+            <a>
+                <fa-icon [icon]=item.Icon style="display:inline-block"></fa-icon>
+                <p style="display:inline-block">{{item.Name}}</p>
+            </a>
+        </li>
+    </ul>
+</div>
